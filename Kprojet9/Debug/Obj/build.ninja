@@ -1,0 +1,37 @@
+#Generating source browse information for project Kproject8
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build adc.pbi : index adc.xcl
+build pin.pbi : index pin.xcl
+build Button.pbi : index Button.xcl
+build led.pbi : index led.xcl
+build ledsIndicator.pbi : index ledsIndicator.xcl
+build measurer.pbi : index measurer.xcl
+build main.pbi : index main.xcl
+build startup.pbi : index startup.xcl
+build Kproject8_part0.pbi : link adc.pbi pin.pbi Button.pbi
+build Kproject8_part1.pbi : link led.pbi ledsIndicator.pbi measurer.pbi
+build Kproject8_part2.pbi : link main.pbi startup.pbi
+build Kproject8.pbd : link Kproject8_part0.pbi Kproject8_part1.pbi Kproject8_part2.pbi
+build Kproject8.pbw : browsedata Kproject8.pbd
+
+

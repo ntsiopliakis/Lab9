@@ -1,0 +1,44 @@
+[
+  {
+    "ID": "c:@F@__low_level_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int __low_level_init(void)",
+    "location": {
+      "column": "5",
+      "line": "15",
+      "path": "C:\\Users\\\u0421\u0442\u0443\u0434\u0435\u043d\u0442-08\\Documents\\Motovn\\HappyNewYear\\main.cpp"
+    },
+    "name": "__low_level_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@garlands",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "garlands",
+    "location": {
+      "column": "10",
+      "line": "51",
+      "path": "C:\\Users\\\u0421\u0442\u0443\u0434\u0435\u043d\u0442-08\\Documents\\Motovn\\HappyNewYear\\main.cpp"
+    },
+    "name": "garlands",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "53",
+      "path": "C:\\Users\\\u0421\u0442\u0443\u0434\u0435\u043d\u0442-08\\Documents\\Motovn\\HappyNewYear\\main.cpp"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  }
+]
